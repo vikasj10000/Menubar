@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.con1{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: crimson;
+}
+
+.con2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.con2 > li{
+    list-style: none;
+    font-weight: bold;
+    padding: 0px 15px;
+    word-spacing:  2px;
+    letter-spacing: 2px;
+}
+
+button{
+    height: 30px;
+    width: 80px;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+    background-color: black;
+    border: 2px solid rgb(139, 96, 96);
+}
+
+button:hover{
+    cursor: pointer;
+    color: crimson;
+    border: 2px solid crimson;
+    transition: all ease-in 0.2s;
+
+}
+
+.fa-solid{
+    color: black;
+    font-size: 50px;
+}
+
+.sec2{
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(7, 15, 11));
+
+
+}
+
+.menu-btn i{
+    color:white;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#click{
+    display: none;
+}
+
+
+/* writing Media query for the same */
+
+@media screen and (max-width : 920px) {
+
+    button{
+        display: none;
+    }
+
+
+    .menu-btn i{
+    display: block;
+    }
+
+    .con2{
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width : 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;        
+    }
+
+        #click:checked ~ ul{
+        left : 0%;
+    }
+
+     
+      #click:checked ~ .menu-btn i::before{
+          content: "\f00d";
+      }
+
+
+    .con2 > li {
+        margin: 60px 0;
+    }
+
+    .con2 > li > a {
+        font-size: 20px;
+        display: block;
+    }
+}
